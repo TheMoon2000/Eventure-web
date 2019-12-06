@@ -1,0 +1,44 @@
+#sidePanel {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 12;
+  background-color: #fdfdfd;
+  overflow-x: hidden;
+  box-shadow: 2px 0px 15px 1px rgba(150,150,150,0.5); /* dx, dy, blur, spread, color */
+  transition: 0.2s;
+}
+
+#sidePanel .header {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+  height: 60px;
+  position: relative;
+}
+
+#sideMenuLogo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  left: 40px;
+  padding: 5px;
+}
+
+#sidePanel a {
+  padding: 10px 15px 10px 20px;
+  text-decoration: none;
+  color: #3f3f3f;
+}
+
+.dismissButton {
+  border-style: none;
+  cursor: pointer;
+  position: absolute;
+  top: 2px;
+  bottom: 0px;
+  margin-top: auto;
+  margin-bottom: auto;
+  background-color: rgba(0, 0, 0, 0);
+}

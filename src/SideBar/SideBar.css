@@ -10,19 +10,22 @@
 }
 
 .main {
-  padding-top: 50px;
+  padding-top: 60px;
 }
 
 .sidebar h3, a {
   display: block;
+  position: relative;
 }
 
 .sidebar h3 {
   font-size: 24px;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 0px;
   padding-left: 20px;
   padding-right: 20px;
+  /* font-family: "Proxima Nova"; */
+  font-weight: 700;
 }
 
 .sidebar a {
@@ -33,6 +36,7 @@
   padding-bottom: 11px;
   padding-left: 20px;
   padding-right: 20px;
+  cursor: default;
   /* vertical-align: middle;*/
 }
 

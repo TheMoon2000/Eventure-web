@@ -30,13 +30,15 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.canvas {
+  height: 100%;
+  position: absolute;
+}
+
+.main {
+  position: absolute;
+  top: 0;
+  bottom: 0;
 }
 
 /* ---- Form ---- */
@@ -165,15 +167,6 @@
 }
 
 
-/* For plain text */
-p {
-  font-family: "Proxima Nova";
-  font-size: 15px;
-  color: #808080;
-  margin-top: 15px;
-  margin-bottom: 20px;
-  line-height: 1.45;
-}
 
 h3 {
   font-size: 22px;

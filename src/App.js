@@ -2,7 +2,12 @@ import React from 'react';
 import './App.css';
 import NavBar from './NavBar/NavBar';
 import SideBar from './SideBar/SideBar';
+import About from './About/About';
+import Privacy from './About/Privacy';
+import SideMenu from './SideMenu/SideMenu';
 import NotFound from './NotFound/NotFound';
+import "./Redux/Reducers";
+import TabBar from './TabBar/TabBar';
 
 class App extends React.Component {
 
@@ -11,28 +16,40 @@ class App extends React.Component {
       case "/about":
         return (
           <div>
-            About page
+            <SideMenu tabitem={"home"} />
+            <NavBar tabitem={"about"} />
+            <About />
+          </div>
+        )
+      case "/privacy":
+        return (
+          <div>
+            <SideMenu tabitem={"home"} />
+            <NavBar tabitem={"privacy"} />
+            <Privacy />
           </div>
         )
       case "/login":
         return (
           <div>
-            Login
+            
           </div>
         )
       case "/":
+      case "/home":
         // TODO: Org and user account differentiation
         return (
-          <div>
-            <NavBar />
+          <div className="canvas">
+            <SideMenu tabitem={"home"} />
+            <NavBar tabitem={"home"} />
             <div className="main">
               <SideBar />
             </div>
+            <TabBar />
           </div>
         );
       default:
         return <NotFound msg={window.location.pathname} />
-        // return <body className="background">Not found</body>
     }
   }
 }

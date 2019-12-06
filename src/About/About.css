@@ -1,0 +1,67 @@
+.about {
+  padding: 70px 100px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+@media screen and (max-width: 700px) {
+  .about { padding: 70px 12% 15px; }
+}
+
+@media screen and (max-width: 600px) {
+  .about { padding: 70px 10% 15px; }
+}
+
+@media screen and (max-width: 500px) {
+  .about { padding: 70px 8% 15px; }
+}
+
+@media screen and (max-width: 400px) {
+  .about { padding: 70px 7% 15px; }
+}
+
+
+.logoView {
+  padding-top: 20px;
+  justify-content: center;
+  text-align: center;
+}
+
+.about p {
+  color: rgb(100, 100, 100);
+  font-family: "Proxima Nova";
+  font-size: 15px;
+  color: #808080;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  line-height: 1.45;
+}
+
+.about h1, .about h2, .about h3 {
+  color: #363636;
+}
+
+.about h1 {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.about p a {
+  display: inline;
+  color: rgb(104, 162, 245);
+}
+
+.aboutText {
+  font-size: 15px;
+  text-align: center;
+  color: #303030;
+  font-weight: 500;
+}
+
+.appstoreButton {
+  padding-top: 30px;
+  display: block;
+  align-content: center;
+  align-self: center;
+  margin: auto;
+}

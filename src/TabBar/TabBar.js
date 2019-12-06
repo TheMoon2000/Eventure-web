@@ -21,12 +21,12 @@ export default function TabBar() {
 
   }
 
-  let eventClass = index === 0 ? "selected" : ""
-  let eventIcon = `static/assets/search${index === 0 ? "-highlighted" : ""}.svg`
-  let orgClass = index === 1 ? "selected" : ""
-  let orgIcon = `static/assets/orgs${index === 1 ? "-highlighted" : ""}.svg`
-  let accountClass = index === 2 ? "selected" : ""
-  let accountIcon = `static/assets/home${index === 2 ? "-highlighted" : ""}.svg`
+  let eventClass = state === 0 ? "selected" : ""
+  let eventIcon = `static/assets/search${state === 0 ? "-highlighted" : ""}.svg`
+  let orgClass = state === 1 ? "selected" : ""
+  let orgIcon = `static/assets/orgs${state === 1 ? "-highlighted" : ""}.svg`
+  let accountClass = state === 2 ? "selected" : ""
+  let accountIcon = `static/assets/home${state === 2 ? "-highlighted" : ""}.svg`
 
   return (
     <div className="tabBar">

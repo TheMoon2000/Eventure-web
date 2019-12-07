@@ -7,6 +7,7 @@ import Privacy from './About/Privacy';
 import SideMenu from './SideMenu/SideMenu';
 import NotFound from './NotFound/NotFound';
 import "./Redux/Reducers";
+import Login from './Login/Login';
 import TabBar from './TabBar/TabBar';
 
 class App extends React.Component {
@@ -32,7 +33,8 @@ class App extends React.Component {
       case "/login":
         return (
           <div>
-            
+            <NavBar tabitem={"login"} />
+            <Login />
           </div>
         )
       case "/":

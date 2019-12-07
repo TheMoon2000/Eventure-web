@@ -56,17 +56,16 @@
 
 @media screen and (max-width: 600px) {
   .about { padding: 70px 10% 15px; }
-  .about p { font-size: 14px; }
 }
 
 @media screen and (max-width: 500px) {
   .about { padding: 70px 7% 15px; }
-  .about p { font-size: 13.5px; }
+  .about p { font-size: 14.5px; }
   .about h1 { font-size: 25px; margin-bottom: 10px; }
   .about h2 { font-size: 21px; margin-bottom: 8px; }
 }
 
 @media screen and (max-width: 400px) {
   .about { padding: 70px 5% 15px; }
-  .about p { font-size: 13px; }
+  .about p { font-size: 14px; }
 }

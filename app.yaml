@@ -4,12 +4,3 @@ handlers:
 - url: /.*
   secure: always
   script: auto
-
-env_variables:
-  SERVER_IP: "104.199.118.226"
-  USERNAME: "admin"
-  PASSWORD: "MeiYouMiMa"
-  STORAGE_PWD: "gs://eventure-main-storage/"
-  AUTH_TOKEN: "Basic RXZlbnR1cmUgMS4xLjI6ZmRiYzk4MjFhNTQ1MTc4ZWZlODUzMzNmNmM3ZmZhMzMzOGNk"
-  APP_STORE: "https://apps.apple.com/app/id1478542362"
-  ENC_ALG: "aes-256-cbc"

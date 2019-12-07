@@ -4,7 +4,6 @@ import tabStore from '../Redux/Reducers';
 
 // Tab Bar should only bar rendered when URL is '/' or '/home'.
 export default function TabBar() {
-
   const tabHashes = ["#events", "#organizations", "#account"];
 
   let index = tabHashes.indexOf(document.location.hash);

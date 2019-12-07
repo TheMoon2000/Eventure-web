@@ -17,25 +17,36 @@ export default function NavBar({ tabitem }) {
     tabitem = "home";
   }
 
-  return (    
-
+  return (
     <div className="navbar">
-      <div className="desktopNavBar">
-        <div className="leftAlign">
-          <img className="logo" src="static/assets/eventure.jpg" alt="eventure" />
-          <a href="/" className={tabitem === "home" ? "selected" : ""}>Home</a>
-          <a href="/about" id="aboutButton" className={tabitem === "about" ? "selected" : ""}>About Us</a>
-          <a href="/privacy" id="privacyButton" className={tabitem === "privacy" ? "selected" : ""}>Privacy Policy</a>
+      <div className="leftAlign">
+        <div className="staticButtonContainer">
+          <img className="logo" src="static/assets/logo_horizontal.png" width="136px" alt="eventure" />
+        </div>
+        <div className="staticButtonContainer">
+          <div className="staticButtons">        
+            <a href="/" className={tabitem === "home" ? "selected" : ""}>Home</a>
+            <a href="/about" id="aboutButton" className={tabitem === "about" ? "selected" : ""}>About Us</a>
+            <a href="/privacy" id="privacyButton" className={tabitem === "privacy" ? "selected" : ""}>Privacy Policy</a>
+          </div>
         </div>
       </div>
-      <div class="mobileNavBar">
-        <button className="menuButton" onClick={openNav}><img src="static/assets/menu.svg" width="20px" alt="menu"/></button>
-        <img className="logo" src="static/assets/eventure.jpg" alt="eventure" />
-        <a href="/" className={tabitem === "home" ? "selected" : ""}>Home</a>
+      <div className="mobileNavBar">
+        <div className="staticButtonContainer">
+          <button className="menuButton" onClick={openNav}><img src="static/assets/menu.svg" width="20px" alt="menu"/></button>
+        </div>
+        <div className="staticButtonContainer">
+          <img className="logo" src="static/assets/eventure.jpg" width="38px" alt="eventure" />
+        </div>
+        <div className="staticButtonContainer">
+          <div className="staticButtons"> 
+            <a href="/" className={tabitem === "home" ? "selected" : ""}>Home</a>
+          </div>
+        </div>
       </div>
       
       <div className="rightAlign">
-        <a href="#" className={tabitem === "login" ? "selected" : ""}>Login</a>
+        <a href="/login" className={tabitem === "login" ? "selected" : ""}>Login</a>
       </div>
     </div>
   )

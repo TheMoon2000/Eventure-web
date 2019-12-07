@@ -1,24 +1,41 @@
 .navbar {
   background-color: white;
   top: 0%;
-  position: fixed;
-  width: 100%;
+  position: absolute;
+  width: 100vw;
   z-index: 10;
   overflow: hidden;
   padding-right: 5px;
   border-bottom: 1pt solid #dfdfdf;
-  box-shadow: 0 4px 2px -2px #efefef;
+  box-shadow: 0 3px 8px -1px rgba(20, 20, 20, 0.1);
   /* padding-left: 70px; */
   height: 60px;
-  vertical-align: middle;
+  display: inline-block;
 }
 
 .navbar .leftAlign {
-  padding-left: 10px;
   position: absolute;
+  padding-left: 10px;
+  top: 50%;
+  height: 80%;
+  transform: translateY(-50%);
+}
+
+.navbar .staticButtonContainer {
+  /* border: 1px solid lightpink; */
+  float: left;
+  position: relative;
+  height: 100%;
+}
+
+.staticButtonContainer .staticButtons {
+  /* float: left; */
+  /* position: absolute; */
+  position: relative;
+  /* left: 10%; */
   top: 50%;
   transform: translateY(-50%);
-  /* border: 1px solid lightgray; */
+  /* border: 1px solid green; */
 }
 
 .navbar .rightAlign {
@@ -32,6 +49,7 @@
 .navbar a {
   /* float: left; */
   display: inline-block;
+  /* position: absolute; */
   color: #5b5b5b;
   padding: 6px 13px;
   margin-left: 5px;
@@ -40,8 +58,8 @@
   font-size: 15px;
   border-radius: 200px;
   transition: 0.2s;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  /* margin-top: 10px; */
+  /* margin-bottom: 10px; */
   /* transform: translateY(-5%); */
 }
 
@@ -65,32 +83,35 @@
 }
 
 .logo {
-  width: 38px;
-  padding-right: 20px;
-  float: left;
+  padding-right: 8px;
+  margin-left: 5px;
+  margin-right: 5px;
+  /* float: left; */
   /* display: inline-block; */
-  /* position: absolute; */
-  /* top: 0; */
+  position: relative;
+  top: 50%;
+  /* left: 0; */
   /* bottom: 0; */
   /* margin-top: auto; */
   /* margin-bottom: auto; */
-  transform: translateY(15%);
+  transform: translateY(-50%);
+  /* border: 1px dashed lightgray; */
+}
+
+
+/* experiment */
+
+.mobileNavBar .staticButtonContainer {
+  height: 80px;
 }
 
 .menuButton {
-  float: left;
+  /* float: left; */
   border-style: none;
-  background-color: white;
-  transform: translateY(15px);
-  padding-right: 12px;
-}
-
-@media screen and (min-width: 600px) {
-  .mobileNavBar { display: none; }
-}
-
-@media screen and (max-width: 600px) {
-  .desktopNavBar { display: none }
+  background-color: transparent;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .mobileNavBar {
@@ -103,4 +124,12 @@
 
 .menuButton:hover {
   cursor: pointer;
+}
+
+@media screen and (min-width: 600px) {
+  .mobileNavBar { display: none; }
+}
+
+@media screen and (max-width: 600px) {
+  .leftAlign { display: none }
 }

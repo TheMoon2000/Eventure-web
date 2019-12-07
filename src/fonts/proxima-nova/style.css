@@ -53,11 +53,3 @@
   font-weight: 800;
   src: local('Proxima Nova Extrabold'), url('ProximaNova-Extrabld.woff') format('woff');
 }
-
-
-@font-face {
-  font-family: 'Proxima Nova';
-  font-style: normal;
-  font-weight: 900;
-  src: local('Proxima Nova Black'), url('ProximaNova-Black.woff') format('woff');
-}

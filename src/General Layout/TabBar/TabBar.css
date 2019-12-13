@@ -3,10 +3,10 @@
   position: fixed;
   bottom: 0;
   /* height: 80px; */
-  z-index: 15;
+  z-index: 12;
   background-color: #fcfcfc;
-  border-top: 1px solid #eaeaea;
-  box-shadow: 0px -1.5px 15px #e0e0e0;
+  border-top: 1px solid #dbdbdb;
+  box-shadow: 0px -1.5px 15px rgba(50, 50, 50, 0.1);
 }
 
 @media screen and (min-width: 600px) {
@@ -48,6 +48,7 @@
 
 .buttonContent img {
   padding-top: 2px;
+  transition: 0.2s;
 }
 
 .buttonContent p {
@@ -59,7 +60,7 @@
   font-family: "Proxima Nova", sans-serif;
 }
 
-.selected p {
+.selected .buttonContent p {
   color: rgb(233, 129, 127);
   font-weight: 500;
 }

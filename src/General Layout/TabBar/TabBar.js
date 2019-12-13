@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './TabBar.css'
-import tabStore from '../Redux/Reducers';
+import tabStore from '../../Redux/Reducers';
 
 // Tab Bar should only bar rendered when URL is '/' or '/home'.
 export default function TabBar() {
@@ -16,8 +16,6 @@ export default function TabBar() {
   function updateState(state) {
     document.location.hash = tabHashes[state];
     tabStore.dispatch({ "type": "update", "index": state });
-
-
   }
 
   let eventClass = state === 0 ? "selected" : ""

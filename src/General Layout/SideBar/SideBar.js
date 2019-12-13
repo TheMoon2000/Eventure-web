@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import "./SideBar.css"
-import tabStore from '../Redux/Reducers'
+import tabStore from '../../Redux/Reducers'
 
 export default function SideBar() {
   let index = ["#events", "#organizations", "#account"].indexOf(document.location.hash);
@@ -42,7 +42,7 @@ export default function SideBar() {
   }
 
   return (
-    <div className="sidebar">
+    <div id="sidebar">
       <h3>Eventure</h3>
       {eventItem}
       {orgItem}

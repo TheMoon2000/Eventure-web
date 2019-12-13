@@ -1,0 +1,7 @@
+#userScreen {
+  z-index: 0; /* The background of everything, lowest index */
+  position: fixed;
+  width: 100%;
+  top: 60px;
+  bottom: 0;
+}

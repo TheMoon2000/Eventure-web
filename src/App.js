@@ -1,18 +1,27 @@
 import React from 'react';
 import './App.css';
-import NavBar from './NavBar/NavBar';
-import SideBar from './SideBar/SideBar';
-import About from './About/About';
-import Privacy from './About/Privacy';
-import SideMenu from './SideMenu/SideMenu';
-import NotFound from './NotFound/NotFound';
+import NavBar from './General Layout/NavBar/NavBar';
+import About from './General Layout/About/About';
+import Privacy from './General Layout/About/Privacy';
+import SideMenu from './General Layout/SideMenu/SideMenu';
+import NotFound from './General Layout/NotFound/NotFound';
 import "./Redux/Reducers";
 import Login from './Login/Login';
-import TabBar from './TabBar/TabBar';
+import UserScreen from './UserScreen/UserScreen'
+import ClaimTicket from './UserScreen/ClaimTicket/ClaimTicket'
 
 class App extends React.Component {
 
   render() {
+    document.onclick = (event) => {
+      console.log(event.target);
+      if (event.target.id === "sideMenu") {
+        document.getElementById("sideMenu").style.backgroundColor = "transparent";
+        document.getElementById("sideMenu").style.pointerEvents = "none"
+        document.getElementById("sidePanel").style.width = "0"
+      }
+    }
+
     switch (window.location.pathname) {
       case "/about":
         return (
@@ -33,6 +42,7 @@ class App extends React.Component {
       case "/login":
         return (
           <div>
+            <SideMenu tabitem={"home"} />
             <NavBar tabitem={"login"} />
             <Login />
           </div>
@@ -40,16 +50,16 @@ class App extends React.Component {
       case "/":
       case "/home":
         // TODO: Org and user account differentiation
+
         return (
           <div className="canvas">
             <SideMenu tabitem={"home"} />
             <NavBar tabitem={"home"} />
-            <div className="main">
-              <SideBar />
-            </div>
-            <TabBar />
+            <UserScreen />
           </div>
         );
+      case "/ticket":
+          return <ClaimTicket />
       default:
         return <NotFound msg={window.location.pathname} />
     }

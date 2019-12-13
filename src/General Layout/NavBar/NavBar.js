@@ -1,10 +1,13 @@
 import React from 'react';
 import "./NavBar.css";
-import $ from 'jquery';
 
 export default function NavBar({ tabitem }) {
 
   function openNav() {
+    // document.getElementById("sideMenu").style.display = "block"
+    document.getElementById("sideMenu").style.backgroundColor = "rgba(70, 70, 70, 0.25)"
+    document.getElementById("sideMenu").style.pointerEvents = "all"
+    
     let menu = document.getElementById("sidePanel")
     if (menu != null) {
       menu.style.width = "240px";

@@ -1,0 +1,56 @@
+#claimTicket h2, h4 {
+  font-family: "Proxima Nova";
+}
+
+#claimTicket h4 {
+  font-size: 18px;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+#claimTicket p {
+  font-size: 15px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+#claimTicket p a {
+  display: inline;
+  color: rgb(104, 162, 245);
+}
+
+#claimTicket .login-form p {
+  margin-top: 12px;
+}
+
+.ticket {
+  position: relative;
+  border: 2px solid grey;
+  background: white;
+  text-align: center;
+  display: block;
+  padding-bottom: 20px;
+  width: auto;
+}
+
+.ticket:before, .ticket:after {
+  height:90px;
+  width:45px;
+  content: '';
+  position: absolute;
+  top: 0.9em;
+  top: calc(0.9em - 1px);
+  height: 1.2em;
+  width: 0.6em;
+  border: 2px solid gray;
+}
+.ticket:before {
+  left: -2px;
+  border-radius: 0 2em 2em 0;
+  border-left-color: white;
+}
+.ticket:after {
+  right: -2px;
+  border-radius: 2em 0 0 2em;
+  border-right-color: white;
+}

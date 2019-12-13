@@ -31,14 +31,8 @@
 }
 
 .canvas {
-  height: 100%;
-  position: absolute;
-}
-
-.main {
-  position: absolute;
-  top: 0;
-  bottom: 0;
+  height: 100vh;
+  position: relative;
 }
 
 /* ---- Form ---- */
@@ -166,23 +160,6 @@
   color: #EF3B3A;
 }
 
-
-
-h3 {
-  font-size: 22px;
-  margin-bottom: 25px;
-  color: #2F2F2F;
-  font-weight: 600;
-  max-width: 100vw;
-}
-
-h4 {
-  margin-bottom: 20px;
-  font-size: 20px;
-  color: #2F2F2F;
-  letter-spacing: 0.01em;
-  font-weight: 600;
-}
 
 .background {
   height: 100vh;

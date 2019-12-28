@@ -3,8 +3,7 @@ import "./SideBar.css"
 import tabStore from '../../Redux/Reducers'
 
 export default function SideBar() {
-  let index = ["#events", "#organizations", "#account"].indexOf(document.location.hash);
-  const [state, setState] = useState(index >= 0 ? index : 0);
+  const [state, setState] = useState(tabStore.getState());
 
   tabStore.subscribe(() => {
     setState(tabStore.getState())

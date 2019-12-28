@@ -9,6 +9,8 @@ import "./Redux/Reducers";
 import Login from './Login/Login';
 import UserScreen from './UserScreen/UserScreen'
 import ClaimTicket from './UserScreen/ClaimTicket/ClaimTicket'
+import './Data Structures/Data structures'
+import sampleEvent from './Data Structures/Data structures';
 
 class App extends React.Component {
 
@@ -59,7 +61,12 @@ class App extends React.Component {
           </div>
         );
       case "/ticket":
-          return <ClaimTicket />
+        return <ClaimTicket />
+      case "/account/activate":
+      case "/account/activateOrg":
+      case "/account/resetpassword":
+        window.location.host = "account.eventure-app.com";
+        break;
       default:
         return <NotFound msg={window.location.pathname} />
     }

@@ -1,29 +1,29 @@
-import React, { useState } from 'react'
+import React, { useState, Component } from 'react'
 import "./EventView.css"
 
-export default function EventCard() {
+export default class EventCard extends Component {
 
+  render() {
+    /*
     const [width, setWidth] = useState(320);
     window.addEventListener("resize", (w, e) => {
       let frameWidth = document.getElementById("scrollableEventCollectionView").offsetWidth
       let objectWidth = document.getElementsByClassName("card")[0].offsetWidth
     });
+    */
 
-
-    let arr = []
-
-    for (let i = 0; i < 5; i++) {
-      arr.push(
-        <div className="card"/* style={{width: width + "px"}}*/>
-          <p style={{textAlign: "center"}}>[Event]</p>
-        </div>
-      );
-      
-    }
+    // TODO: Layout the event card view
 
     return (
-      <div id="scrollableEventCollectionView">
-        {arr}
+      <div className="card"/* style={{width: width + "px"}}*/>
+        <div className="imageContainer">
+          <img className="eventCoverImage" alt="" />
+        </div>
+        <h4>{this.props.eventInfo["Title"]}</h4>
+        <p className="datetime">{this.props.eventInfo["Start time"]}</p>
+        {/* <p className="centerText">{0}</p> */}
       </div>
     )
+  }
+    
 }

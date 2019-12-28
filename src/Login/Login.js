@@ -8,7 +8,7 @@ export default function Login() {
       <div className="login-page">
         <div className="form">
           <h3>Log In</h3>
-            <form className="login-form" id="login_form" method="post" onSubmit={handleLogin}>
+            <form className="login-form" id="login_form" method="post" onSubmit={tmpWarning}>
               <input type="username" placeholder="Email / Org ID" name="login"/>
               <input type="password" placeholder="Password" name="password"/>
               <button type="submit">Sign In</button>
@@ -17,6 +17,11 @@ export default function Login() {
       </div>
     </div>
   )
+}
+
+function tmpWarning(info) {
+  info.preventDefault();
+  alert("We're currently working on this feature. In the mean time, please use our mobile app to log in!");
 }
 
 function handleLogin(info) {

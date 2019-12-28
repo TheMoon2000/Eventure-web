@@ -1,0 +1,8 @@
+.nothing {
+  position: relative;
+  color: #555;
+  text-align: center;
+  margin: 0;
+  top: 49%;
+  transform: translateY(-50%);
+}

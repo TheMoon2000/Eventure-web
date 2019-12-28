@@ -32,33 +32,86 @@
   padding: 10px;
 }
 
+/* Event Card */
+
 .card {
   position: relative;
   display: inline-block;
   background-color: white;
   border-radius: 8px;
-  width: 330px;
-  height: 420px;
+  width: 320px;
+  min-width: 300px;
+  max-width: 480px;
+  /* width: calc(300px + attr(".card.margin")); */
+  min-height: 400px;
+  max-height: 600px;
+  /* height: 420px; */
   margin: 10px;
   box-shadow: 0px 1px 15px 5px rgba(50, 50, 50, 0.15);
   transition: 0.2s;
+  overflow: hidden;
 }
 
 .card:hover {
   background-color: #f6f5f5;
 }
 
+.card .centerText {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  display: none;
+}
+
+.imageContainer {
+  width: 100%;
+  padding-bottom: 66.66%;
+  position: relative;
+}
+
+img.eventCoverImage {
+  background-color: #f2f2f2;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 100%;
+  /* 
+  border: 0;
+  position: absolute;
+  left: 0;
+  right: 0; */
+}
+
+.card h4 {
+  position: relative;
+  margin: 17px 20px 3px;
+  font-size: 17px;
+}
+
+.card .datetime {
+  position: relative;
+  display: block;
+  font-size: 13px;
+  color: darkgray;
+  margin: 3px 20px;
+}
+
+
 @media (max-width: 600px) {
   .collectionView { left: 0px; }
+  
+  /*
   .card {
-    display: block;
-    width: auto;
     margin-bottom: 20px;
-    /* width: auto; */
-  }
+    width: calc(100% - 20px);
+  }*/
+
   #scrollableEventCollectionView {
     text-align: center;
-    margin-bottom: 60px;
-    overflow: scroll;
+    /* margin-bottom: 60px; */
+    /* overflow: scroll; */
   }
 }

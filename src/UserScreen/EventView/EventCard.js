@@ -26,8 +26,6 @@ export default class EventCard extends Component {
       var formatted = startDate.format('ddd, MMM D @ h:mm A');
     }
 
-    // TODO: Layout the event card view
-
     return (
       <div className="card" onClick={this.redirect}>
         <div className="imageContainer">
@@ -35,11 +33,18 @@ export default class EventCard extends Component {
         </div>
         <h4>{this.props.eventInfo["Title"]}</h4>
         <p className="datetime">{formatted}</p>
+
+        <div className="separator" />
         
-        <div className="detailItem">
-          <h6>Where:</h6>
-          {/* <p>This is a really long location name to test whether the text wraps properly.</p> */}
-          <p>Short location</p>
+        <div className="detailRegion">
+          <div className="detailItem">
+            <h6>Where:</h6>
+            <p>{this.props.eventInfo["Location"]}</p>
+          </div>
+          <div className="detailItem">
+            <h6>Hosted by:</h6>
+            <p style={{marginLeft: "84px"}}>{this.props.eventInfo["Organization title"]}</p>
+          </div>
         </div>
       </div>
     )

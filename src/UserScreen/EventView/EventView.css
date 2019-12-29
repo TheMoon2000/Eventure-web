@@ -86,37 +86,50 @@ img.eventCoverImage {
   right: 0; */
 }
 
-.card h4, .card h6 {
-  margin-left: 20px;
-}
-
 .card h4 {
   position: relative;
   margin: 17px 20px 3px;
   font-size: 17px;
 }
 
+.card .separator {
+  position: relative;
+  height: 1px;
+  background: #e6e6e6;
+  margin-left: calc(50% - 25px);
+  margin-right: calc(50% - 25px);
+}
+
+.card .detailRegion {
+  /* background-color: lightgoldenrodyellow; */
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .card .detailItem {
   position: relative;
-  background-color: lightgoldenrodyellow;
-  width: 100%;
+  /* border: 1px dashed lightgray; */
+  min-height: 15px;
+  margin: 7px 20px;
 }
 
 .detailItem h6 {
-  position: relative;
-  display: inline-block;
+  position: absolute;
   color: #323232;
-  margin-top: 2px;
+  margin-top: 0px;
   font-size: 14px;
 }
 
 .detailItem p {
   font-size: 14px;
-  margin: 5px;
-  display: inline;
+  margin: 2px;
   color: #555;
+  /* display: inline-block; */
   position: relative;
   text-align: right;
+  margin-left: 58px;
+  /* border: 1px dashed lightgray; */
 }
 
 .card .datetime {
@@ -124,7 +137,7 @@ img.eventCoverImage {
   display: block;
   font-size: 13px;
   color: darkgray;
-  margin: 3px 20px 18px;
+  margin: 3px 20px 20px;
 }
 
 

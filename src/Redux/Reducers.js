@@ -18,6 +18,7 @@ function tabReducer(state = 0, action) {
 const tabStore = createStore(tabReducer)
 let index = ["#events", "#organizations", "#account"].indexOf(document.location.hash);
 tabStore.dispatch({ type: "update", index: index >= 0 ? index : 0 })
+console.log("current tab", tabStore.getState())
 window.store = tabStore;
 
 export default tabStore;

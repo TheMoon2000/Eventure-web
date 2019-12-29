@@ -16,7 +16,7 @@ class App extends React.Component {
 
   render() {
     document.onclick = (event) => {
-      console.log(event.target);
+      // console.log(event.target);
       if (event.target.id === "sideMenu") {
         document.getElementById("sideMenu").style.backgroundColor = "transparent";
         document.getElementById("sideMenu").style.pointerEvents = "none"

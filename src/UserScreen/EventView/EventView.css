@@ -42,9 +42,10 @@
   width: 320px;
   min-width: 300px;
   max-width: 480px;
+  vertical-align: top;
   /* width: calc(300px + attr(".card.margin")); */
-  min-height: 400px;
-  max-height: 600px;
+  /* min-height: 400px; */
+  /* max-height: 600px; */
   /* height: 420px; */
   margin: 10px;
   box-shadow: 0px 1px 15px 5px rgba(50, 50, 50, 0.15);
@@ -53,7 +54,7 @@
 }
 
 .card:hover {
-  background-color: #f6f5f5;
+  cursor: pointer;
 }
 
 .card .centerText {
@@ -85,10 +86,37 @@ img.eventCoverImage {
   right: 0; */
 }
 
+.card h4, .card h6 {
+  margin-left: 20px;
+}
+
 .card h4 {
   position: relative;
   margin: 17px 20px 3px;
   font-size: 17px;
+}
+
+.card .detailItem {
+  position: relative;
+  background-color: lightgoldenrodyellow;
+  width: 100%;
+}
+
+.detailItem h6 {
+  position: relative;
+  display: inline-block;
+  color: #323232;
+  margin-top: 2px;
+  font-size: 14px;
+}
+
+.detailItem p {
+  font-size: 14px;
+  margin: 5px;
+  display: inline;
+  color: #555;
+  position: relative;
+  text-align: right;
 }
 
 .card .datetime {
@@ -96,7 +124,7 @@ img.eventCoverImage {
   display: block;
   font-size: 13px;
   color: darkgray;
-  margin: 3px 20px;
+  margin: 3px 20px 18px;
 }
 
 

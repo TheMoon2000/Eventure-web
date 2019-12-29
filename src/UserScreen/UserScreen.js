@@ -26,8 +26,6 @@ export default class UserScreen extends Component {
   render() {
     let currentView = <div></div>;
 
-    console.log("Current tab index: ", tabStore.getState());
-
     switch (tabStore.getState()) {
       case 0:
         currentView = <EventView />;

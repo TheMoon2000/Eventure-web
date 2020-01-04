@@ -6,3 +6,52 @@
   top: 49%;
   transform: translateY(-50%);
 }
+
+.orgTableView {
+  position: absolute;
+  left: 180px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: scroll;
+  /* background-color: lightsteelblue; */
+  user-select: none;
+}
+
+.orgCell {
+  background-color: white;
+  min-height: 60px;
+  position: relative;
+}
+
+.orgCell:hover {
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+.orgCellContent {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  left: 10px;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.orgCell p {
+  margin: 5px 10px;
+  user-select: auto;
+}
+
+.orgCell img {
+  position: inline;
+  margin: 5px;
+  user-select: none;
+}
+
+@media (max-width: 600px) {
+  .orgTableView {
+    left: 0px;
+  }
+}

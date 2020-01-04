@@ -47,10 +47,6 @@
   /* min-height: 400px; */
   /* max-height: 600px; */
   /* height: 420px; */
-  margin: 10px;
-  box-shadow: 0px 1px 15px 5px rgba(50, 50, 50, 0.15);
-  transition: 0.2s;
-  overflow: hidden;
 }
 
 .card:hover {

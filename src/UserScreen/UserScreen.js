@@ -43,8 +43,8 @@ export default class UserScreen extends Component {
     return (
       <div>
         <div id="userScreen">
-        <SideBar />
-        {currentView}
+          <SideBar />
+          {currentView}
         </div>
         <TabBar />
       </div>

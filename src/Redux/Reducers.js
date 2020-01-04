@@ -1,5 +1,4 @@
 import { createStore } from "redux";
-import { maxHeaderSize } from "http";
 
 const currentUser = {
   "accountType": "student",

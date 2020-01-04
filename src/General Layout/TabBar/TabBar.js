@@ -28,21 +28,21 @@ export default function TabBar() {
   return (
     <div className="tabBar">
       <button className={eventClass} onClick={() => updateState(0)}>
-        <div class="buttonContent">
+        <div className="buttonContent">
           <img src={eventIcon} width="24px" alt="events" />
           <p>Events</p>
         </div>
       </button>
 
       <button className={orgClass} onClick={() => updateState(1)}>
-        <div class="buttonContent">
+        <div className="buttonContent">
           <img src={orgIcon} width="24px" alt="organizations" />
           <p>Organizations</p>
         </div>
       </button>
       
       <button className={accountClass} onClick={() => updateState(2)}>
-        <div class="buttonContent">
+        <div className="buttonContent">
           <img src={accountIcon} width="24px" alt="account" />
           <p>Account</p>
         </div>

@@ -1,16 +1,16 @@
 import React from 'react';
 import './App.css';
+import "./Redux/Reducers";
 import NavBar from './General Layout/NavBar/NavBar';
 import About from './General Layout/About/About';
 import Privacy from './General Layout/About/Privacy';
 import SideMenu from './General Layout/SideMenu/SideMenu';
 import NotFound from './General Layout/NotFound/NotFound';
-import "./Redux/Reducers";
 import Login from './Login/Login';
 import UserScreen from './UserScreen/UserScreen'
 import ClaimTicket from './UserScreen/ClaimTicket/ClaimTicket'
+import EventDetailPage from './UserScreen/EventDetailPage/EventDetailPage'
 import './Data Structures/Data structures'
-import sampleEvent from './Data Structures/Data structures';
 
 class App extends React.Component {
 
@@ -60,6 +60,14 @@ class App extends React.Component {
             <UserScreen />
           </div>
         );
+      case "/event":
+        return (
+          <div className="canvas">
+            <SideMenu tabitem={"home"} />
+            <NavBar tabitem={""} />
+            <EventDetailPage />
+          </div>
+        )
       case "/ticket":
         return <ClaimTicket />
       case "/account/activate":

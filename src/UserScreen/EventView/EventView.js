@@ -2,13 +2,17 @@ import React, { Component } from 'react'
 import "./EventView.css"
 import EventCard from './EventCard'
 import axios from 'axios';
+import moment from 'moment';
 
 export default class EventView extends Component {
 
   constructor(props) {
     super(props);
 
-    axios.get(process.env.REACT_APP_API_URL + 'events/List')
+    let lowerBound = moment().format("YYYY-MM-DD hh:mm:ss");
+    lowerBound = "2019-12-01 00:00:00";
+
+    axios.get(process.env.REACT_APP_API_URL + 'events/List?lowerBound=' + encodeURI(lowerBound))
       .then( (response) => {
         console.log(`Loaded ${response.data.length} events`)
         this.setState({
@@ -36,7 +40,7 @@ export default class EventView extends Component {
       eventCards.push(<EventCard eventInfo={this.state.events[i]} />);
     }
 
-    if (this.state.loaded) {
+    if (this.state.loaded && eventCards.length > 0) {
       return (
         <div className="collectionView">
           <div id="scrollableEventCollectionView">
@@ -44,6 +48,12 @@ export default class EventView extends Component {
         </div>
       </div>
       );
+    } else if (this.state.loaded) {
+      return (<div className="collectionView">
+        <div id="scrollableEventCollectionView">
+          <p className="nothing">No events.</p>
+        </div>
+      </div>)
     } else {
       return (
         <div className="collectionView">

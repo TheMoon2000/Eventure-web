@@ -1,0 +1,18 @@
+.eventDetailPage {
+  /* background-color: seashell; */
+  position: fixed;
+  width: 100%;
+  top: 60px;
+  bottom: 0;
+}
+
+.eventDetailPage p.placeholderText {
+  position: absolute;
+  margin: 5px;
+  text-align: center;
+  line-height: 125%;
+  color: gray;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -16,10 +16,6 @@ export default function NavBar({ tabitem }) {
     }
   }
 
-  if (tabitem === "") {
-    tabitem = "home";
-  }
-
   return (
     <div className="navbar">
       <div className="leftAlign">

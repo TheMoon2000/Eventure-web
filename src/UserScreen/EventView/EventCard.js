@@ -4,10 +4,6 @@ import "./EventView.css"
 
 export default class EventCard extends Component {
 
-  redirect(info) {
-    console.log(info)
-  }
-
   render() {
     /*
     const [width, setWidth] = useState(320);
@@ -16,6 +12,12 @@ export default class EventCard extends Component {
       let objectWidth = document.getElementsByClassName("card")[0].offsetWidth
     });
     */
+
+    let eventInfo = this.props.eventInfo;
+
+    function redirect(info) {
+      window.open('event?id=' + eventInfo.system_id)
+    }
 
     // Date format reference: https://devhints.io/moment
 
@@ -27,7 +29,7 @@ export default class EventCard extends Component {
     }
 
     return (
-      <div className="card" onClick={this.redirect}>
+      <div className="card cellWithShadow" onClick={redirect}>
         <div className="imageContainer">
           <img className="eventCoverImage" alt="" />
         </div>
@@ -49,5 +51,4 @@ export default class EventCard extends Component {
       </div>
     )
   }
-    
 }
